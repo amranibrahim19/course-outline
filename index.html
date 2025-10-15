@@ -135,6 +135,7 @@ Classification</a></li>
 Management</a></li>
 <li><a href="#module-6-main-application">Module 6: Main
 Application</a></li>
+<li><a href="#module-7-web-interface">Module 7: Web Interface & API</a></li>
 </ol>
 <hr />
 <h2 id="project-structure">Project Structure</h2>
@@ -147,9 +148,15 @@ Application</a></li>
 │   ├── excel_exporter.py     # Module 4: Excel export
 │   └── db_manager.py         # Module 5: Database management
 ├── data/                     # Sample PDF files
+├── uploads/                  # Uploaded PDF files
+├── results/                  # Generated Excel/CSV files
+├── templates/
+│   └── index.html            # Simple web interface
 ├── main.py                   # Module 6: Main application
+├── app.py                    # Module 7: Flask web API
 ├── requirements.txt          # Dependencies
-└── .env                      # Environment variables</code></pre>
+├── Postman_Collection.json   # API testing
+└── README.md                 # Documentation</code></pre>
 <hr />
 <h3 id="module-1-pdf-text-extraction">Module 1: PDF Text Extraction</h3>
 <p><strong>File:</strong> <code>modules/pdf_extractor.py</code></p>
@@ -1044,4 +1051,129 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a hr
 <span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
 <span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre></div>
+<hr />
+<h3 id="module-7-web-interface">Module 7: Web Interface & API</h3>
+<p><strong>Files:</strong> <code>app.py</code>, <code>web/templates/index.html</code>, <code>Postman_Collection.json</code></p>
+<p>This module provides a modern web interface and REST API for the PDF OCR system, making it accessible through a browser and testable with Postman.</p>
+<h4 id="features">Features</h4>
+<ul>
+<li>🌐 <strong>Web UI:</strong> Modern, responsive upload interface</li>
+<li>🔌 <strong>REST API:</strong> JSON endpoints for PDF processing</li>
+<li>📱 <strong>Drag & Drop:</strong> Easy file upload with visual feedback</li>
+<li>🧪 <strong>API Testing:</strong> Pre-configured Postman collection</li>
+<li>📊 <strong>Real-time Results:</strong> Live processing status and results</li>
+<li>💾 <strong>File Downloads:</strong> Automatic Excel export for LPO files</li>
+</ul>
+<h4 id="web-interface">Web Interface</h4>
+<p>The web interface provides a clean, modern upload experience:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;!DOCTYPE html&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">lang</span>=<span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;meta</span> <span class="er">charset</span>=<span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;title&gt;</span>PDF OCR Text Classifier<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Modern CSS styling --&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Upload interface with drag &amp; drop --&gt;</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></code></pre></div>
+<h4 id="flask-api-endpoints">Flask API Endpoints</h4>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">Flask API for PDF OCR Text Classifier</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">Simple web interface and API endpoints for PDF processing</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> flask <span class="im">import</span> Flask, render_template, request, jsonify, send_file</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> werkzeug.utils <span class="im">import</span> secure_filename</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> modules.pdf_extractor <span class="im">import</span> extract_from_pdf</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> modules.text_cleaner <span class="im">import</span> clean_text_preserve_lines</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> modules.rule_classifier <span class="im">import</span> classify_by_rule, extract_lpo_info</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> modules.excel_exporter <span class="im">import</span> export_lpo_to_excel</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> modules.db_manager <span class="im">import</span> init_db, save_lpo_to_db, save_to_db</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> Flask(__name__)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>app.config[<span class="st">'MAX_CONTENT_LENGTH'</span>] <span class="op">=</span> <span class="dv">16</span> <span class="op">*</span> <span class="dv">1024</span> <span class="op">*</span> <span class="dv">1024</span>  <span class="co"># 16MB max</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="at">@app.route</span>(<span class="st">'/'</span>)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> index():</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Serve the main upload page&quot;&quot;&quot;</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> render_template(<span class="st">'index.html'</span>)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="at">@app.route</span>(<span class="st">'/api/process-pdf'</span>, methods=[<span class="st">'POST'</span>])</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_pdf():</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;API endpoint to process uploaded PDF files&quot;&quot;&quot;</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Process PDF and return JSON response</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> jsonify(response_data)</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="at">@app.route</span>(<span class="st">'/api/health'</span>)</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> health_check():</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Health check endpoint for API testing&quot;&quot;&quot;</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> jsonify({<span class="st">'status'</span>: <span class="st">'healthy'</span>})</span></code></pre></div>
+<h4 id="api-endpoints">API Endpoints</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GET</td>
+<td><code>/</code></td>
+<td>Web upload interface</td>
+</tr>
+<tr class="even">
+<td>POST</td>
+<td><code>/api/process-pdf</code></td>
+<td>Process uploaded PDF file</td>
+</tr>
+<tr class="odd">
+<td>GET</td>
+<td><code>/api/health</code></td>
+<td>API health check</td>
+</tr>
+<tr class="even">
+<td>GET/POST</td>
+<td><code>/api/test</code></td>
+<td>Test endpoint for Postman</td>
+</tr>
+<tr class="odd">
+<td>GET</td>
+<td><code>/api/download/&lt;filename&gt;</code></td>
+<td>Download generated Excel files</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage">Usage</h4>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start the Flask application</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>python app.py</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Access web interface</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Open browser: http://localhost:5000</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Test API with curl</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>curl -X POST -F <span class="st">&quot;file=@data/sample.pdf&quot;</span> http://localhost:5000/api/process-pdf</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Import Postman collection</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># File: Postman_Collection.json</span></code></pre></div>
+<h4 id="response-format">Response Format</h4>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;success&quot;</span>: <span class="kw">true</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;pdf_type&quot;</span>: <span class="st">&quot;LPO&quot;</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;text_length&quot;</span>: <span class="dv">15420</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;tables_count&quot;</span>: <span class="dv">3</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;filename&quot;</span>: <span class="st">&quot;sample.pdf&quot;</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;lpo_info&quot;</span>: {</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;line_items&quot;</span>: [...],</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;total_amount&quot;</span>: <span class="st">&quot;1,250.00&quot;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  },</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;download_url&quot;</span>: <span class="st">&quot;/api/download/lpo_sample.xlsx&quot;</span>,</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;saved_to_db&quot;</span>: <span class="kw">true</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr />

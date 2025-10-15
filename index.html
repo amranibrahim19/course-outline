@@ -9,11 +9,34 @@
     margin: 0 auto;
     padding: 24px 16px;
   }
-  h2, h3, h4 { scroll-margin-top: 80px; }
-  h2 { font-size: 1.9rem; margin: 20px 0 12px; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
-  h3 { font-size: 1.35rem; margin: 18px 0 8px; }
-  p, li { font-size: 1.02rem; }
-  ol, ul { padding-left: 1.25rem; }
+
+  h2,
+  h3,
+  h4 {
+    scroll-margin-top: 80px;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+    margin: 20px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+    margin: 18px 0 8px;
+  }
+
+  p,
+  li {
+    font-size: 1.02rem;
+  }
+
+  ol,
+  ul {
+    padding-left: 1.25rem;
+  }
 
   /* Inline code */
   code:not(pre code) {
@@ -33,8 +56,9 @@
     border-radius: 10px;
     padding: 14px 16px;
     overflow: auto;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
   }
+
   pre code {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 0.95rem;
@@ -54,26 +78,80 @@
     cursor: pointer;
     transition: background 0.15s ease, border-color 0.15s ease;
   }
-  .copy-btn:hover { background: #f3f4f6; border-color: #cfd3d8; }
-  .copy-btn:active { background: #e5e7eb; }
-  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 1px, 1px); border: 0; }
+
+  .copy-btn:hover {
+    background: #f3f4f6;
+    border-color: #cfd3d8;
+  }
+
+  .copy-btn:active {
+    background: #e5e7eb;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 1px, 1px);
+    border: 0;
+  }
 
   /* Tables (if any appear inside code sections) */
-  table { border-collapse: collapse; border: 1px solid #e5e7eb; }
-  th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+  table {
+    border-collapse: collapse;
+    border: 1px solid #e5e7eb;
+  }
+
+  th,
+  td {
+    border: 1px solid #e5e7eb;
+    padding: 8px 10px;
+    text-align: left;
+  }
 
   /* Light dark-mode support (prefers-color-scheme) */
   @media (prefers-color-scheme: dark) {
-    body { color: #e5e7eb; background: #0b1020; }
-    h2 { border-color: #223; }
-    code:not(pre code), pre { background: #0f172a; border-color: #1f2937; }
-    .copy-btn { background: #0b1020; color: #e5e7eb; border-color: #233046; }
-    .copy-btn:hover { background: #0e1528; }
-    table, th, td { border-color: #233046; }
+    body {
+      color: #e5e7eb;
+      background: #0b1020;
+    }
+
+    h2 {
+      border-color: #223;
+    }
+
+    code:not(pre code),
+    pre {
+      background: #0f172a;
+      border-color: #1f2937;
+    }
+
+    .copy-btn {
+      background: #0b1020;
+      color: #e5e7eb;
+      border-color: #233046;
+    }
+
+    .copy-btn:hover {
+      background: #0e1528;
+    }
+
+    table,
+    th,
+    td {
+      border-color: #233046;
+    }
   }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" integrity="sha512-PH3XRdYQBrH9iOzL9h3Dk8mQx6X2Krj55pIp27o6KEx8C1YyH+tJq2a0k5Rmsi+Gqs0m15dI6o0wX8Gv0pSg0Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-YoUq9Qy0uFjhgY8bJqE8rM1oVqk2o6yQ1k0+5v6cC4b3mB6iX7F3q8mM5sO4y2U6F6cY2z+o6g7o9i0b7m2mWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+  integrity="sha512-PH3XRdYQBrH9iOzL9h3Dk8mQx6X2Krj55pIp27o6KEx8C1YyH+tJq2a0k5Rmsi+Gqs0m15dI6o0wX8Gv0pSg0Q=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+  integrity="sha512-YoUq9Qy0uFjhgY8bJqE8rM1oVqk2o6yQ1k0+5v6cC4b3mB6iX7F3q8mM5sO4y2U6F6cY2z+o6g7o9i0b7m2mWw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     if (window.hljs && typeof window.hljs.highlightAll === 'function') {
@@ -107,11 +185,11 @@
           }
           const original = btn.textContent;
           btn.textContent = 'Copied!';
-          setTimeout(function(){ btn.textContent = original; }, 1200);
+          setTimeout(function () { btn.textContent = original; }, 1200);
         } catch (e) {
           const original = btn.textContent;
           btn.textContent = 'Failed';
-          setTimeout(function(){ btn.textContent = original; }, 1200);
+          setTimeout(function () { btn.textContent = original; }, 1200);
         }
       });
 
@@ -121,21 +199,21 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <h2 id="pdf-extractor-course-booklet"># PDF Extractor Course
-Booklet</h2>
+  Booklet</h2>
 <h3 id="table-of-contents">Table of Contents</h3>
 <ol type="1">
-<li><a href="#project-structure">Project Structure</a></li>
-<li><a href="#module-1-pdf-text-extraction">Module 1: PDF Text
-Extraction</a></li>
-<li><a href="#module-2-text-cleaning">Module 2: Text Cleaning</a></li>
-<li><a href="#module-3-text-classification">Module 3: Text
-Classification</a></li>
-<li><a href="#module-4-excel-export">Module 4: Excel Export</a></li>
-<li><a href="#module-5-database-management">Module 5: Database
-Management</a></li>
-<li><a href="#module-6-main-application">Module 6: Main
-Application</a></li>
-<li><a href="#module-7-web-interface">Module 7: Web Interface & API</a></li>
+  <li><a href="#project-structure">Project Structure</a></li>
+  <li><a href="#module-1-pdf-text-extraction">Module 1: PDF Text
+      Extraction</a></li>
+  <li><a href="#module-2-text-cleaning">Module 2: Text Cleaning</a></li>
+  <li><a href="#module-3-text-classification">Module 3: Text
+      Classification</a></li>
+  <li><a href="#module-4-excel-export">Module 4: Excel Export</a></li>
+  <li><a href="#module-5-database-management">Module 5: Database
+      Management</a></li>
+  <li><a href="#module-6-main-application">Module 6: Main
+      Application</a></li>
+  <li><a href="#module-7-web-interface">Module 7: Web Interface & API</a></li>
 </ol>
 <hr />
 <h2 id="project-structure">Project Structure</h2>
@@ -148,21 +226,30 @@ Application</a></li>
 │   ├── excel_exporter.py     # Module 4: Excel export
 │   └── db_manager.py         # Module 5: Database management
 ├── data/                     # Sample PDF files
-├── uploads/                  # Uploaded PDF files
+│   ├── LPO-1001-002938-2025..pdf
+│   ├── Text_Classification_Course_Booklet.pdf
+│   ├── UPM contoh.xlsx
+│   └── USMPO_25_36690.pdf
+├── uploads/                  # Uploaded PDF files (user uploads)
 ├── results/                  # Generated Excel/CSV files
+│   ├── lpo_LPO-1001-002938-2025._1760531826.csv
+│   └── lpo_LPO-1001-002938-2025._1760531826.xlsx
 ├── templates/
 │   └── index.html            # Simple web interface
+├── venv/                     # Python virtual environment
 ├── main.py                   # Module 6: Main application
 ├── app.py                    # Module 7: Flask web API
 ├── requirements.txt          # Dependencies
 ├── Postman_Collection.json   # API testing
-└── README.md                 # Documentation</code></pre>
+├── PDF_Extractor_Course_Booklet.md  # Course documentation
+└── README.md                 # Project documentation</code></pre>
 <hr />
 <h3 id="module-1-pdf-text-extraction">Module 1: PDF Text Extraction</h3>
 <p><strong>File:</strong> <code>modules/pdf_extractor.py</code></p>
 <h4 id="complete-code">Complete Code</h4>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pdfplumber</span>
+<div class="sourceCode" id="cb2">
+  <pre
+    class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pdfplumber</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -335,13 +422,15 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a hr
 <span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>            </span>
 <span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
 <span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Error parsing single column table: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span></code></pre></div>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span></code></pre>
+</div>
 <hr />
 <h2 id="module-2-text-cleaning">Module 2: Text Cleaning</h2>
 <p><strong>File:</strong> <code>modules/text_cleaner.py</code></p>
 <h3 id="complete-code-1">Complete Code</h3>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<div class="sourceCode" id="cb3">
+  <pre
+    class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_text(text):</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> text:</span>
@@ -371,13 +460,15 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a hr
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> cleaned_line:  <span class="co"># Only keep non-empty lines</span></span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            cleaned_lines.append(cleaned_line)</span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>.join(cleaned_lines)</span></code></pre></div>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>.join(cleaned_lines)</span></code></pre>
+</div>
 <hr />
 <h2 id="module-3-text-classification">Module 3: Text Classification</h2>
 <p><strong>File:</strong> <code>modules/rule_classifier.py</code></p>
 <h3 id="complete-code-2">Complete Code</h3>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<div class="sourceCode" id="cb4">
+  <pre
+    class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_by_rule(text, pdf_type<span class="op">=</span><span class="st">&quot;DEFAULT&quot;</span>):</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    sections <span class="op">=</span> {</span>
@@ -642,13 +733,15 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a hr
 <span id="cb4-263"><a href="#cb4-263" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, item <span class="kw">in</span> <span class="bu">enumerate</span>(lpo_info.get(<span class="st">&#39;line_items&#39;</span>, []), <span class="dv">1</span>):</span>
 <span id="cb4-264"><a href="#cb4-264" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>item<span class="sc">.</span>get(<span class="st">&#39;description&#39;</span>, <span class="st">&#39;N/A&#39;</span>)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
 <span id="cb4-265"><a href="#cb4-265" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;   Qty: </span><span class="sc">{</span>item<span class="sc">.</span>get(<span class="st">&#39;quantity&#39;</span>, <span class="st">&#39;N/A&#39;</span>)<span class="sc">}</span><span class="ss"> | Price: </span><span class="sc">{</span>item<span class="sc">.</span>get(<span class="st">&#39;unit_price&#39;</span>, <span class="st">&#39;N/A&#39;</span>)<span class="sc">}</span><span class="ss"> | Total: </span><span class="sc">{</span>item<span class="sc">.</span>get(<span class="st">&#39;total&#39;</span>, <span class="st">&#39;N/A&#39;</span>)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb4-266"><a href="#cb4-266" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>()</span></code></pre></div>
+<span id="cb4-266"><a href="#cb4-266" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>()</span></code></pre>
+</div>
 <hr />
 <h2 id="module-4-excel-export">Module 4: Excel Export</h2>
 <p><strong>File:</strong> <code>modules/excel_exporter.py</code></p>
 <h3 id="complete-code-3">Complete Code</h3>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<div class="sourceCode" id="cb5">
+  <pre
+    class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -687,13 +780,15 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a hr
 <span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
 <span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Error exporting to Excel: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span></code></pre></div>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span></code></pre>
+</div>
 <hr />
 <h2 id="module-5-database-management">Module 5: Database Management</h2>
 <p><strong>File:</strong> <code>modules/db_manager.py</code></p>
 <h3 id="complete-code-4">Complete Code</h3>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<div class="sourceCode" id="cb6">
+  <pre
+    class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mysql.connector</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -943,13 +1038,14 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a hr
 <span id="cb6-248"><a href="#cb6-248" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb6-249"><a href="#cb6-249" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
 <span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Error clearing records: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb6-251"><a href="#cb6-251" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span></code></pre></div>
+<span id="cb6-251"><a href="#cb6-251" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span></code></pre>
+</div>
 <hr />
 <h2 id="module-6-main-application">Module 6: Main Application</h2>
 <p><strong>File:</strong> <code>main.py</code></p>
 <h3 id="complete-code-5">Complete Code</h3>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<div class="sourceCode" id="cb7">
+  <pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">Main Program - Enhanced PDF Text Classifier</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">Processes both USM and LPO PDF files with filename detection</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
@@ -1050,37 +1146,216 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a hr
 <span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;=&quot;</span><span class="op">*</span><span class="dv">60</span>)</span>
 <span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
-<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre></div>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre>
+</div>
 <hr />
 <h3 id="module-7-web-interface">Module 7: Web Interface & API</h3>
-<p><strong>Files:</strong> <code>app.py</code>, <code>web/templates/index.html</code>, <code>Postman_Collection.json</code></p>
-<p>This module provides a modern web interface and REST API for the PDF OCR system, making it accessible through a browser and testable with Postman.</p>
+<p><strong>Files:</strong> <code>app.py</code>, <code>templates/index.html</code>, <code>Postman_Collection.json</code>
+</p>
+<p>This module provides a modern web interface and REST API for the PDF OCR system, making it accessible through a
+  browser and testable with Postman.</p>
 <h4 id="features">Features</h4>
 <ul>
-<li>🌐 <strong>Web UI:</strong> Modern, responsive upload interface</li>
-<li>🔌 <strong>REST API:</strong> JSON endpoints for PDF processing</li>
-<li>📱 <strong>Drag & Drop:</strong> Easy file upload with visual feedback</li>
-<li>🧪 <strong>API Testing:</strong> Pre-configured Postman collection</li>
-<li>📊 <strong>Real-time Results:</strong> Live processing status and results</li>
-<li>💾 <strong>File Downloads:</strong> Automatic Excel export for LPO files</li>
+  <li>🌐 <strong>Web UI:</strong> Modern, responsive upload interface</li>
+  <li>🔌 <strong>REST API:</strong> JSON endpoints for PDF processing</li>
+  <li>📱 <strong>Drag & Drop:</strong> Easy file upload with visual feedback</li>
+  <li>🧪 <strong>API Testing:</strong> Pre-configured Postman collection</li>
+  <li>📊 <strong>Real-time Results:</strong> Live processing status and results</li>
+  <li>💾 <strong>File Downloads:</strong> Automatic Excel export for LPO files</li>
 </ul>
 <h4 id="web-interface">Web Interface</h4>
-<p>The web interface provides a clean, modern upload experience:</p>
+<p>The web interface provides a clean, modern upload experience with drag & drop functionality:</p>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;!DOCTYPE html&gt;</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">lang</span>=<span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;meta</span> <span class="er">charset</span>=<span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;title&gt;</span>PDF OCR Text Classifier<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Modern CSS styling --&gt;</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Upload interface with drag &amp; drop --&gt;</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></code></pre></div>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;meta</span> <span class="er">name</span>=<span class="st">&quot;viewport&quot;</span> <span class="er">content</span>=<span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;title&gt;</span>PDF OCR Classifier<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;style&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">body</span> {</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>            <span class="kw">font-family</span>: <span class="kw">Arial</span>, <span class="kw">sans-serif</span>;</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>            <span class="kw">max-width</span>: <span class="dv">800</span><span class="kw">px</span>;</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>            <span class="kw">margin</span>: <span class="dv">50</span><span class="kw">px</span> <span class="kw">auto</span>;</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>            <span class="kw">padding</span>: <span class="dv">20</span><span class="kw">px</span>;</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>            <span class="kw">background</span>: <span class="st">#f5f5f5</span>;</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.container</span> {</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>            <span class="kw">background</span>: <span class="kw">white</span>;</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>            <span class="kw">padding</span>: <span class="dv">30</span><span class="kw">px</span>;</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>            <span class="kw">border-radius</span>: <span class="dv">10</span><span class="kw">px</span>;</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>            <span class="kw">box-shadow</span>: <span class="dv">0</span> <span class="dv">2</span><span class="kw">px</span> <span class="dv">10</span><span class="kw">px</span> <span class="kw">rgba</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0.1</span>);</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        <span class="kw">h1</span> { <span class="kw">color</span>: <span class="st">#333</span>; <span class="kw">text-align</span>: <span class="kw">center</span>; <span class="kw">margin-bottom</span>: <span class="dv">30</span><span class="kw">px</span>; }</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.upload-area</span> {</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>            <span class="kw">border</span>: <span class="dv">2</span><span class="kw">px</span> <span class="kw">dashed</span> <span class="st">#ccc</span>;</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>            <span class="kw">padding</span>: <span class="dv">40</span><span class="kw">px</span>;</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>            <span class="kw">text-align</span>: <span class="kw">center</span>;</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>            <span class="kw">margin</span>: <span class="dv">20</span><span class="kw">px</span> <span class="dv">0</span>;</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>            <span class="kw">cursor</span>: <span class="kw">pointer</span>;</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>            <span class="kw">border-radius</span>: <span class="dv">5</span><span class="kw">px</span>;</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.upload-area:hover</span> { <span class="kw">border-color</span>: <span class="st">#007bff</span>; <span class="kw">background</span>: <span class="st">#f8f9fa</span>; }</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.btn</span> {</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>            <span class="kw">background</span>: <span class="st">#007bff</span>;</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>            <span class="kw">color</span>: <span class="kw">white</span>;</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>            <span class="kw">border</span>: <span class="kw">none</span>;</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>            <span class="kw">padding</span>: <span class="dv">12</span><span class="kw">px</span> <span class="dv">24</span><span class="kw">px</span>;</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>            <span class="kw">border-radius</span>: <span class="dv">5</span><span class="kw">px</span>;</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>            <span class="kw">cursor</span>: <span class="kw">pointer</span>;</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>            <span class="kw">width</span>: <span class="dv">100</span><span class="kw">%</span>;</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>            <span class="kw">font-size</span>: <span class="dv">16</span><span class="kw">px</span>;</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.btn:hover</span> { <span class="kw">background</span>: <span class="st">#0056b3</span>; }</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.btn:disabled</span> { <span class="kw">background</span>: <span class="st">#ccc</span>; <span class="kw">cursor</span>: <span class="kw">not-allowed</span>; }</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.result</span> { <span class="kw">margin-top</span>: <span class="dv">20</span><span class="kw">px</span>; <span class="kw">padding</span>: <span class="dv">15</span><span class="kw">px</span>; <span class="kw">background</span>: <span class="st">#f8f9fa</span>; <span class="kw">border-radius</span>: <span class="dv">5</span><span class="kw">px</span>; }</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.error</span> { <span class="kw">background</span>: <span class="st">#f8d7da</span>; <span class="kw">color</span>: <span class="st">#721c24</span>; }</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.success</span> { <span class="kw">background</span>: <span class="st">#d4edda</span>; <span class="kw">color</span>: <span class="st">#155724</span>; }</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.loading</span> { <span class="kw">text-align</span>: <span class="kw">center</span>; <span class="kw">margin</span>: <span class="dv">20</span><span class="kw">px</span> <span class="dv">0</span>; }</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.spinner</span> { <span class="kw">border</span>: <span class="dv">4</span><span class="kw">px</span> <span class="kw">solid</span> <span class="st">#f3f3f3</span>; <span class="kw">border-top</span>: <span class="dv">4</span><span class="kw">px</span> <span class="kw">solid</span> <span class="st">#007bff</span>; <span class="kw">border-radius</span>: <span class="dv">50</span><span class="kw">%</span>; <span class="kw">width</span>: <span class="dv">40</span><span class="kw">px</span>; <span class="kw">height</span>: <span class="dv">40</span><span class="kw">px</span>; <span class="kw">animation</span>: <span class="kw">spin</span> <span class="dv">1</span><span class="kw">s</span> <span class="kw">linear</span> <span class="kw">infinite</span>; <span class="kw">margin</span>: <span class="dv">0</span> <span class="kw">auto</span>; }</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>        <span class="kw">@keyframes</span> <span class="kw">spin</span> { <span class="dv">0</span><span class="kw">%</span> { <span class="kw">transform</span>: <span class="kw">rotate</span>(<span class="dv">0</span><span class="kw">deg</span>); } <span class="dv">100</span><span class="kw">%</span> { <span class="kw">transform</span>: <span class="kw">rotate</span>(<span class="dv">360</span><span class="kw">deg</span>); } }</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>        <span class="kw">pre</span> { <span class="kw">background</span>: <span class="st">#f1f1f1</span>; <span class="kw">padding</span>: <span class="dv">10</span><span class="kw">px</span>; <span class="kw">border-radius</span>: <span class="dv">3</span><span class="kw">px</span>; <span class="kw">overflow-x</span>: <span class="kw">auto</span>; }</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>        <span class="kw">.warning</span> { <span class="kw">background</span>: <span class="st">#fff3cd</span>; <span class="kw">border</span>: <span class="dv">1</span><span class="kw">px</span> <span class="kw">solid</span> <span class="st">#ffeaa7</span>; <span class="kw">padding</span>: <span class="dv">10</span><span class="kw">px</span>; <span class="kw">border-radius</span>: <span class="dv">5</span><span class="kw">px</span>; <span class="kw">margin</span>: <span class="dv">10</span><span class="kw">px</span> <span class="dv">0</span>; }</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/style&gt;</span></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span>=<span class="st">&quot;container&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;h1&gt;</span>📄 PDF OCR Classifier<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span>=<span class="st">&quot;warning&quot;</span> <span class="er">id</span>=<span class="st">&quot;serverWarning&quot;</span> <span class="er">style</span>=<span class="st">&quot;display: none;&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;strong&gt;</span>⚠️ Server Required:<span class="kw">&lt;/strong&gt;</span> Run <span class="kw">&lt;code&gt;</span>python app.py<span class="kw">&lt;/code&gt;</span> and access via <span class="kw">&lt;code&gt;</span>http://localhost:5000<span class="kw">&lt;/code&gt;</span></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span>=<span class="st">&quot;upload-area&quot;</span> <span class="er">id</span>=<span class="st">&quot;uploadArea&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;div</span> <span class="er">style</span>=<span class="st">&quot;font-size: 48px; margin-bottom: 10px;&quot;</span><span class="kw">&gt;</span>📁<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;div&gt;</span>Click to upload or drag &amp; drop PDF file<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;div</span> <span class="er">style</span>=<span class="st">&quot;color: #666; font-size: 14px; margin-top: 5px;&quot;</span><span class="kw">&gt;</span>Supports USM and LPO formats<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;input</span> <span class="er">type</span>=<span class="st">&quot;file&quot;</span> <span class="er">id</span>=<span class="st">&quot;fileInput&quot;</span> <span class="er">accept</span>=<span class="st">&quot;.pdf&quot;</span> <span class="er">style</span>=<span class="st">&quot;display: none;&quot;</span> /<span class="kw">&gt;</span></span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;button</span> <span class="er">class</span>=<span class="st">&quot;btn&quot;</span> <span class="er">id</span>=<span class="st">&quot;processBtn&quot;</span> <span class="er">disabled</span><span class="kw">&gt;</span>Process PDF<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span>=<span class="st">&quot;loading&quot;</span> <span class="er">id</span>=<span class="st">&quot;loading&quot;</span> <span class="er">style</span>=<span class="st">&quot;display: none;&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;div</span> <span class="er">class</span>=<span class="st">&quot;spinner&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;p&gt;</span>Processing your PDF...<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span>=<span class="st">&quot;result&quot;</span> <span class="er">id</span>=<span class="st">&quot;result&quot;</span> <span class="er">style</span>=<span class="st">&quot;display: none;&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;script&gt;</span></span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> <span class="kw">uploadArea</span> = <span class="kw">document</span>.<span class="kw">getElementById</span>(<span class="st">'uploadArea'</span>);</span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> <span class="kw">fileInput</span> = <span class="kw">document</span>.<span class="kw">getElementById</span>(<span class="st">'fileInput'</span>);</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> <span class="kw">processBtn</span> = <span class="kw">document</span>.<span class="kw">getElementById</span>(<span class="st">'processBtn'</span>);</span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> <span class="kw">loading</span> = <span class="kw">document</span>.<span class="kw">getElementById</span>(<span class="st">'loading'</span>);</span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> <span class="kw">result</span> = <span class="kw">document</span>.<span class="kw">getElementById</span>(<span class="st">'result'</span>);</span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> <span class="kw">selectedFile</span> = <span class="kw">null</span>;</span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Show warning if opened as file://</span></span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="kw">window</span>.<span class="kw">location</span>.<span class="kw">protocol</span> === <span class="st">'file:'</span>) {</span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>            <span class="kw">document</span>.<span class="kw">getElementById</span>(<span class="st">'serverWarning'</span>).<span class="kw">style</span>.<span class="kw">display</span> = <span class="st">'block'</span>;</span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Upload area click</span></span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a>        <span class="kw">uploadArea</span>.<span class="kw">addEventListener</span>(<span class="st">'click'</span>, () => <span class="kw">fileInput</span>.<span class="kw">click</span>());</span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>        <span class="co">// File input change</span></span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a>        <span class="kw">fileInput</span>.<span class="kw">addEventListener</span>(<span class="st">'change'</span>, (<span class="kw">e</span>) => {</span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> <span class="kw">file</span> = <span class="kw">e</span>.<span class="kw">target</span>.<span class="kw">files</span>[<span class="dv">0</span>];</span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (<span class="kw">file</span> && <span class="kw">file</span>.<span class="kw">type</span> === <span class="st">'application/pdf'</span>) {</span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>                <span class="kw">selectedFile</span> = <span class="kw">file</span>;</span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>                <span class="kw">processBtn</span>.<span class="kw">disabled</span> = <span class="kw">false</span>;</span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a>                <span class="kw">uploadArea</span>.<span class="kw">innerHTML</span> = <span class="st">`</span></span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">&lt;div</span> <span class="er">style</span>=<span class="st">&quot;font-size: 24px; margin-bottom: 10px;&quot;</span><span class="kw">&gt;</span>✅<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">&lt;div&gt;&lt;strong&gt;</span>Selected:<span class="kw">&lt;/strong&gt;</span> <span class="kw">${</span><span class="kw">file</span>.<span class="kw">name</span><span class="kw">}</span><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">&lt;div</span> <span class="er">style</span>=<span class="st">&quot;color: #666; font-size: 14px;&quot;</span><span class="kw">&gt;</span>Size: <span class="kw">${(</span><span class="kw">file</span>.<span class="kw">size</span> / <span class="dv">1024</span> / <span class="dv">1024</span><span class="kw">).toFixed(2)}</span> MB<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span>;</span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>            } <span class="cf">else</span> {</span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>                <span class="kw">alert</span>(<span class="st">'Please select a PDF file.'</span>);</span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>        });</span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Drag and drop</span></span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>        <span class="kw">uploadArea</span>.<span class="kw">addEventListener</span>(<span class="st">'dragover'</span>, (<span class="kw">e</span>) => {</span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>            <span class="kw">e</span>.<span class="kw">preventDefault</span>();</span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a>            <span class="kw">uploadArea</span>.<span class="kw">style</span>.<span class="kw">borderColor</span> = <span class="st">'#007bff'</span>;</span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>            <span class="kw">uploadArea</span>.<span class="kw">style</span>.<span class="kw">background</span> = <span class="st">'#f8f9fa'</span>;</span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>        });</span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>        <span class="kw">uploadArea</span>.<span class="kw">addEventListener</span>(<span class="st">'dragleave'</span>, () => {</span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a>            <span class="kw">uploadArea</span>.<span class="kw">style</span>.<span class="kw">borderColor</span> = <span class="st">'#ccc'</span>;</span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>            <span class="kw">uploadArea</span>.<span class="kw">style</span>.<span class="kw">background</span> = <span class="st">'white'</span>;</span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>        });</span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>        <span class="kw">uploadArea</span>.<span class="kw">addEventListener</span>(<span class="st">'drop'</span>, (<span class="kw">e</span>) => {</span>
+<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>            <span class="kw">e</span>.<span class="kw">preventDefault</span>();</span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>            <span class="kw">uploadArea</span>.<span class="kw">style</span>.<span class="kw">borderColor</span> = <span class="st">'#ccc'</span>;</span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a>            <span class="kw">uploadArea</span>.<span class="kw">style</span>.<span class="kw">background</span> = <span class="st">'white'</span>;</span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> <span class="kw">files</span> = <span class="kw">e</span>.<span class="kw">dataTransfer</span>.<span class="kw">files</span>;</span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (<span class="kw">files</span>.<span class="kw">length</span> > <span class="dv">0</span>) {</span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a>                <span class="kw">fileInput</span>.<span class="kw">files</span> = <span class="kw">files</span>;</span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a>                <span class="kw">fileInput</span>.<span class="kw">dispatchEvent</span>(<span class="kw">new</span> <span class="kw">Event</span>(<span class="st">'change'</span>));</span>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a>        });</span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Process button</span></span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a>        <span class="kw">processBtn</span>.<span class="kw">addEventListener</span>(<span class="st">'click'</span>, <span class="kw">async</span> () => {</span>
+<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (!<span class="kw">selectedFile</span>) <span class="cf">return</span>;</span>
+<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a>            <span class="kw">processBtn</span>.<span class="kw">disabled</span> = <span class="kw">true</span>;</span>
+<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>            <span class="kw">loading</span>.<span class="kw">style</span>.<span class="kw">display</span> = <span class="st">'block'</span>;</span>
+<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a>            <span class="kw">result</span>.<span class="kw">style</span>.<span class="kw">display</span> = <span class="st">'none'</span>;</span>
+<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> <span class="kw">formData</span> = <span class="kw">new</span> <span class="kw">FormData</span>();</span>
+<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a>            <span class="kw">formData</span>.<span class="kw">append</span>(<span class="st">'file'</span>, <span class="kw">selectedFile</span>);</span>
+<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> <span class="kw">apiUrl</span> = <span class="kw">window</span>.<span class="kw">location</span>.<span class="kw">protocol</span> === <span class="st">'file:'</span> </span>
+<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a>                ? <span class="st">'http://localhost:5000/api/process-pdf'</span></span>
+<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a>                : <span class="st">'/api/process-pdf'</span>;</span>
+<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span> {</span>
+<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a>                <span class="kw">const</span> <span class="kw">response</span> = <span class="kw">await</span> <span class="kw">fetch</span>(<span class="kw">apiUrl</span>, {</span>
+<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">method</span>: <span class="st">'POST'</span>,</span>
+<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">body</span>: <span class="kw">formData</span></span>
+<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a>                });</span>
+<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a>                <span class="kw">const</span> <span class="kw">data</span> = <span class="kw">await</span> <span class="kw">response</span>.<span class="kw">json</span>();</span>
+<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a>                <span class="kw">loading</span>.<span class="kw">style</span>.<span class="kw">display</span> = <span class="st">'none'</span>;</span>
+<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a>                <span class="kw">result</span>.<span class="kw">style</span>.<span class="kw">display</span> = <span class="st">'block'</span>;</span>
+<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> (<span class="kw">data</span>.<span class="kw">success</span>) {</span>
+<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">result</span>.<span class="kw">className</span> = <span class="st">'result success'</span>;</span>
+<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">result</span>.<span class="kw">innerHTML</span> = <span class="st">`</span></span>
+<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">&lt;h3&gt;</span>✅ Processing Complete<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">&lt;p&gt;&lt;strong&gt;</span>PDF Type:<span class="kw">&lt;/strong&gt;</span> <span class="kw">${</span><span class="kw">data</span>.<span class="kw">pdf_type</span><span class="kw">}</span><span class="kw">&lt;/p&gt;</span></span>
+<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">&lt;p&gt;&lt;strong&gt;</span>Text Length:<span class="kw">&lt;/strong&gt;</span> <span class="kw">${</span><span class="kw">data</span>.<span class="kw">text_length</span><span class="kw">}</span> characters<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">&lt;p&gt;&lt;strong&gt;</span>Tables Found:<span class="kw">&lt;/strong&gt;</span> <span class="kw">${</span><span class="kw">data</span>.<span class="kw">tables_count</span><span class="kw">}</span><span class="kw">&lt;/p&gt;</span></span>
+<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">${</span><span class="kw">data</span>.<span class="kw">download_url</span> ? <span class="st">`&lt;p&gt;&lt;strong&gt;Download Excel:&lt;/strong&gt; &lt;a href=&quot;${data.download_url}&quot; target=&quot;_blank&quot;&gt;Excel File&lt;/a&gt;&lt;/p&gt;`</span> : <span class="st">''</span><span class="kw">}</span></span>
+<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">${</span><span class="kw">data</span>.<span class="kw">csv_url</span> ? <span class="st">`&lt;p&gt;&lt;strong&gt;Download CSV:&lt;/strong&gt; &lt;a href=&quot;${data.csv_url}&quot; target=&quot;_blank&quot;&gt;CSV File&lt;/a&gt;&lt;/p&gt;`</span> : <span class="st">''</span><span class="kw">}</span></span>
+<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">${</span><span class="kw">data</span>.<span class="kw">lpo_info</span> ? <span class="st">`&lt;details&gt;&lt;summary&gt;LPO Information&lt;/summary&gt;&lt;pre&gt;${JSON.stringify(data.lpo_info, null, 2)}&lt;/pre&gt;&lt;/details&gt;`</span> : <span class="st">''</span><span class="kw">}</span></span>
+<span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">${</span><span class="kw">data</span>.<span class="kw">classification</span> ? <span class="st">`&lt;details&gt;&lt;summary&gt;Classification Results&lt;/summary&gt;&lt;pre&gt;${JSON.stringify(data.classification, null, 2)}&lt;/pre&gt;&lt;/details&gt;`</span> : <span class="st">''</span><span class="kw">}</span></span>
+<span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a>                    <span class="st">`</span>;</span>
+<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a>                } <span class="cf">else</span> {</span>
+<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">result</span>.<span class="kw">className</span> = <span class="st">'result error'</span>;</span>
+<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">result</span>.<span class="kw">innerHTML</span> = <span class="st">`&lt;h3&gt;❌ Error&lt;/h3&gt;&lt;p&gt;${data.error || 'Processing failed'}&lt;/p&gt;`</span>;</span>
+<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a>            } <span class="cf">catch</span> (<span class="kw">error</span>) {</span>
+<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a>                <span class="kw">loading</span>.<span class="kw">style</span>.<span class="kw">display</span> = <span class="st">'none'</span>;</span>
+<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a>                <span class="kw">result</span>.<span class="kw">style</span>.<span class="kw">display</span> = <span class="st">'block'</span>;</span>
+<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a>                <span class="kw">result</span>.<span class="kw">className</span> = <span class="st">'result error'</span>;</span>
+<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a>                <span class="kw">result</span>.<span class="kw">innerHTML</span> = <span class="st">`&lt;h3&gt;❌ Error&lt;/h3&gt;&lt;p&gt;Network error: ${error.message}&lt;/p&gt;`</span>;</span>
+<span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb8-181"><a href="#cb8-181" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-182"><a href="#cb8-182" aria-hidden="true" tabindex="-1"></a>            <span class="kw">processBtn</span>.<span class="kw">disabled</span> = <span class="kw">false</span>;</span>
+<span id="cb8-183"><a href="#cb8-183" aria-hidden="true" tabindex="-1"></a>        });</span>
+<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></code></pre></div>
 <h4 id="flask-api-endpoints">Flask API Endpoints</h4>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<div class="sourceCode" id="cb9">
+  <pre
+    class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">Flask API for PDF OCR Text Classifier</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">Simple web interface and API endpoints for PDF processing</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
@@ -1110,47 +1385,49 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a hr
 <span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="at">@app.route</span>(<span class="st">'/api/health'</span>)</span>
 <span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> health_check():</span>
 <span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Health check endpoint for API testing&quot;&quot;&quot;</span></span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> jsonify({<span class="st">'status'</span>: <span class="st">'healthy'</span>})</span></code></pre></div>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> jsonify({<span class="st">'status'</span>: <span class="st">'healthy'</span>})</span></code></pre>
+</div>
 <h4 id="api-endpoints">API Endpoints</h4>
 <table>
-<thead>
-<tr class="header">
-<th>Method</th>
-<th>Endpoint</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>GET</td>
-<td><code>/</code></td>
-<td>Web upload interface</td>
-</tr>
-<tr class="even">
-<td>POST</td>
-<td><code>/api/process-pdf</code></td>
-<td>Process uploaded PDF file</td>
-</tr>
-<tr class="odd">
-<td>GET</td>
-<td><code>/api/health</code></td>
-<td>API health check</td>
-</tr>
-<tr class="even">
-<td>GET/POST</td>
-<td><code>/api/test</code></td>
-<td>Test endpoint for Postman</td>
-</tr>
-<tr class="odd">
-<td>GET</td>
-<td><code>/api/download/&lt;filename&gt;</code></td>
-<td>Download generated Excel files</td>
-</tr>
-</tbody>
+  <thead>
+    <tr class="header">
+      <th>Method</th>
+      <th>Endpoint</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>GET</td>
+      <td><code>/</code></td>
+      <td>Web upload interface</td>
+    </tr>
+    <tr class="even">
+      <td>POST</td>
+      <td><code>/api/process-pdf</code></td>
+      <td>Process uploaded PDF file</td>
+    </tr>
+    <tr class="odd">
+      <td>GET</td>
+      <td><code>/api/health</code></td>
+      <td>API health check</td>
+    </tr>
+    <tr class="even">
+      <td>GET/POST</td>
+      <td><code>/api/test</code></td>
+      <td>Test endpoint for Postman</td>
+    </tr>
+    <tr class="odd">
+      <td>GET</td>
+      <td><code>/api/download/&lt;filename&gt;</code></td>
+      <td>Download generated Excel files</td>
+    </tr>
+  </tbody>
 </table>
 <h4 id="usage">Usage</h4>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start the Flask application</span></span>
+<div class="sourceCode" id="cb10">
+  <pre
+    class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start the Flask application</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>python app.py</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-4"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Access web interface</span></span>
@@ -1160,10 +1437,11 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href=
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>curl -X POST -F <span class="st">&quot;file=@data/sample.pdf&quot;</span> http://localhost:5000/api/process-pdf</span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Import Postman collection</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># File: Postman_Collection.json</span></code></pre></div>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># File: Postman_Collection.json</span></code></pre>
+</div>
 <h4 id="response-format">Response Format</h4>
-<div class="sourceCode" id="cb11"><pre
-class="sourceCode json"><code class="sourceCode json"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<div class="sourceCode" id="cb11">
+  <pre class="sourceCode json"><code class="sourceCode json"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>{</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;success&quot;</span>: <span class="kw">true</span>,</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;pdf_type&quot;</span>: <span class="st">&quot;LPO&quot;</span>,</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;text_length&quot;</span>: <span class="dv">15420</span>,</span>
@@ -1175,5 +1453,6 @@ class="sourceCode json"><code class="sourceCode json"><span id="cb11-1"><a href=
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  },</span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;download_url&quot;</span>: <span class="st">&quot;/api/download/lpo_sample.xlsx&quot;</span>,</span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;saved_to_db&quot;</span>: <span class="kw">true</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+</div>
 <hr />
